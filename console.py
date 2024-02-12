@@ -14,6 +14,7 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     """
     HBNBCommand class for command interpreter inherit
@@ -79,7 +80,8 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
             return
-        if args[0] not in ["BaseModel", "State", "City", "Amenity", "Place", "Review"]:
+        if args[0] not in ["BaseModel", "State",
+                           "City", "Amenity", "Place", "Review"]:
             print("** class doesn't exist **")
             return
         if len(args) < 2:
@@ -98,7 +100,8 @@ class HBNBCommand(cmd.Cmd):
         objects = storage.all()
         if not arg:
             print([str(obj) for obj in objects.values()])
-        elif arg in ["BaseModel", "State", "City", "Amenity", "Place", "Review"]:
+        elif arg in ["BaseModel", "State", "City",
+                     "Amenity", "Place", "Review"]:
             print([str(obj) for key, obj in objects.items() if arg in key])
         else:
             print("** class doesn't exist **")
@@ -109,7 +112,8 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
             return
-        if args[0] not in ["BaseModel", "State", "City", "Amenity", "Place", "Review"]:
+        if args[0] not in ["BaseModel", "State", "City",
+                           "Amenity", "Place", "Review"]:
             print("** class doesn't exist **")
             return
         if len(args) < 2:
@@ -128,6 +132,8 @@ class HBNBCommand(cmd.Cmd):
             return
         setattr(objects[key], args[2], args[3])
         storage.save()
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
 
