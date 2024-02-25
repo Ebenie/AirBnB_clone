@@ -1,16 +1,17 @@
-header{
-
-	color: white;
-	height: 70px;
-	width: 100%;
-	border-bottom:1px #CCCCCC;
-
+header {
+    color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    align-items: center;
 }
 
-header .hbnbLogo{
-
-	padding-left: 20px;
-	background: url("../images/logo.png") no-repeat center;
-	width: 120px;
+header .hbnbLogo {
+    margin-left: 20px;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 140px;
     height: 60px;
 }
